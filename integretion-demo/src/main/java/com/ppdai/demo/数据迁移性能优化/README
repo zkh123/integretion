@@ -1,0 +1,16 @@
+select str_to_date('08/09/2008', '%m/%d/%Y'); -- 2008-08-09
+SELECT time_format('1924-01-02', '%Y-%m-%d') -- 字符串转成时间格式
+SELECT DATE_FORMAT(date, format)
+
+
+SELECT * FROM t_batchuserlist WHERE DATE_FORMAT(insert_time,'%Y-%m-%d')>'2015-08-05';
+
+SELECT substring('2017-12-26 23:27:40',0,10);
+
+SELECT DATE_FORMAT('2017-12-26 23:27:40','%Y-%m-%d');
+
+SELECT * FROM t_batchuserlist WHERE DATE_FORMAT(insert_time,'%Y-%m-%d')>'2015-08-05';
+
+SELECT * FROM t_lk_user_list ORDER BY id  LIMIT 5,10; -- 检索记录行 6-15
+
+SELECT * FROM t_lk_user_list;

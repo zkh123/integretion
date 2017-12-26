@@ -1,0 +1,41 @@
+server:
+  port: 8088
+
+#mysql数据库
+datasource:
+  springboot:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pisk
+    username: root
+    password:
+
+#druid连接池的配置
+druid:
+  initialSize: 5
+  minIdle: 5
+  maxActive: 20
+  maxWait: 60000
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: SELECT 1 FROM DUAL
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
+  poolPreparedStatements: true
+  maxPoolPreparedStatementPerConnectionSize: 20
+  filters: stat,wall,log4j
+  connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  useGlobalDataSourceStat: true
+
+
+
+#swagger 在线api展示
+swagger:
+  api:
+    name: aip的组信息
+    title: 魔云项目接口文档
+    description: 在线接口文档
+    verison: 1.00
+    contactUser: 黄李俊
+    contactUrl: https://www.google.com
+    contactEmail: huanglijun@ppdai.com

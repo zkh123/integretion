@@ -1,0 +1,22 @@
+请求:
+http://api.piskschedule.risk.ppdaicorp.com/ScheduleHandler.ashx?action=RUN&jobclassfullname=com.ppdai.risk.pisk.schedule.job.AntiFraudForPcGuoduoJob&jobinfo=12:com.ppdai.risk.pisk.schedule.job.AntiFraudForPcGuoduoJob:1
+
+请求url的拆分:
+http://api.piskschedule.risk.ppdaicorp.com/ScheduleHandler.ashx?
+action=RUN&
+jobclassfullname=com.ppdai.risk.pisk.schedule.job.AntiFraudForPcGuoduoJob&
+jobinfo=12:com.ppdai.risk.pisk.schedule.job.AntiFraudForPcGuoduoJob:1
+
+
+eg:
+localhost:8088/myFirstJob?action=RUN&jobclassfullname=com.ppdai.demo.定时job.my_do.MyFirstJob&jobinfo=12:com.ppdai.demo.定时job.my_do.MyFirstJob:1
+
+描述:
+1,common_jar实际上可以打成一个pom文件,上传到私服上面去.
+2,当添加的jar太多的时候, 可以将该项目进行多台分布式部署(前面架设nignx进行负载均衡)
+3,可以书写一个定时任务的后台管理系统,配置上面url的请求参数 以及执行的时间点以及nignx服务器的ip,就可以统一管理定时任务.
+
+
+
+localhost:8088/myFirstJob?action=RUN&jobclassfullname=com.ppdai.demo.定时job.my_do.MyFirstJob&jobinfo=12:com.ppdai.demo.定时job.my_do.MyFirstJob:1
+localhost:8088/secondJob?action=RUN&jobclassfullname=com.ppdai.demo.定时job.my_do.SecondJob&jobinfo=12:com.ppdai.demo.定时job.my_do.SecondJob:1
